@@ -1,0 +1,30 @@
+body {
+    background-color: #ffe6f2; /* Light pink */
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff4d6d;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+button {
+    background: hotpink;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    background: deeppink;
+}
+
+#message {
+    font-size: 22px;
+    margin-top: 20px;
+}
