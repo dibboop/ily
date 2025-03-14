@@ -1,45 +1,27 @@
-/* Start with the scary hacker look */
 body {
     background-color: black;
-    color: green;
+    color: #00ff00;
     font-family: 'Courier New', monospace;
     text-align: center;
+    padding-top: 20%;
+}
+
+.hacker-screen {
     font-size: 20px;
-    padding-top: 100px;
-    transition: all 2s ease;
 }
 
-/* Glitch effect */
-.glitch {
-    animation: glitch 0.8s infinite alternate;
-}
-
-@keyframes glitch {
-    0% { text-shadow: 5px 5px red, -5px -5px blue; }
-    100% { text-shadow: -5px -5px red, 5px 5px blue; }
-}
-
-/* When the prank is revealed, turn pastel & cute */
-.cute-mode {
-    background-color: pink !important;
-    color: white !important;
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 24px;
-    text-shadow: 2px 2px 5px hotpink;
-}
-
-/* Cute button */
-button {
-    background: hotpink;
+.start-btn {
+    display: none;
+    background-color: pink;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 10px;
-    display: none; /* Hidden at first */
+    margin-top: 20px;
 }
 
-button:hover {
-    background: deeppink;
+.start-btn:hover {
+    background-color: hotpink;
 }
