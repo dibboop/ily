@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="game.css">
+    <style>
+        body {
+            background-color: #ffebf0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: #ff4d6d;
+            font-size: 36px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ff758f;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 30px;
+            animation: floatUp 4s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎁 Surprise! 🎁</h1>
+    
+    <p>
+        Hii, I know you said I should tell you when I trust you…  
+        So this is me telling you that I trust you.  
+        And also… I love you. 🥺❤️
+    </p>
+
+    <p>
+        Honestly, I don't even know how to put this into words,  
+        but every single moment with you makes me feel safe,  
+        happy, and just so lucky. You’ve been so patient,  
+        so kind, and I don’t think I could have ever imagined  
+        someone like you would come into my life.  
+        
+        I know I take my time with things, and maybe I overthink too much,  
+        but if there's one thing I'm sure about… it's this.  
+        It’s you.  
+        
+        So, this is me saying it for the first time.  
+        And I mean it with all my heart.  
+        
+        I love you. 💖
+    </p>
+
+    <button onclick="window.location.href='hacked.html'">Go Back</button>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
