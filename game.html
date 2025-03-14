@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <h1>🌸 Welcome to the Quest for Love! 🌸</h1>
+    <p>You are on a journey to unlock a special message. Choose wisely!</p>
+    
+    <button onclick="startGame()">Start</button>
+
+    <div id="gameArea" style="display:none;">
+        <p>You're standing at a crossroads. Do you go left or right?</p>
+        <button onclick="choosePath('left')">Left</button>
+        <button onclick="choosePath('right')">Right</button>
+    </div>
+
+    <p id="message"></p>
+
+</body>
+</html>
