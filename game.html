@@ -3,23 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Game</title>
-    <link rel="stylesheet" href="game.css">
-    <script src="game.js" defer></script>
+    <title>Find the Code</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>🌸 Welcome to the Quest for Love! 🌸</h1>
-    <p>You are on a journey to unlock a special message. Choose wisely!</p>
-    
-    <button onclick="startGame()">Start</button>
+    <h1>Find the Secret Code 🔍</h1>
+    <p>Click on the objects to reveal the hidden numbers!</p>
 
-    <div id="gameArea" style="display:none;">
-        <p>You're standing at a crossroads. Do you go left or right?</p>
-        <button onclick="choosePath('left')">Left</button>
-        <button onclick="choosePath('right')">Right</button>
+    <!-- Objects for treasure hunt -->
+    <div class="hunt-container">
+        <img src="laptop.png" class="object" onclick="showHint(0)" alt="Laptop">
+        <img src="note.png" class="object" onclick="showHint(1)" alt="Note">
+        <img src="book.png" class="object" onclick="showHint(2)" alt="Book">
+        <img src="phone.png" class="object" onclick="showHint(3)" alt="Phone">
     </div>
 
-    <p id="message"></p>
+    <!-- Hidden numbers will appear here -->
+    <div id="hints">
+        <p id="hint0" class="hidden">Hint 1: The first number is <strong>3</strong></p>
+        <p id="hint1" class="hidden">Hint 2: The second number is <strong>7</strong></p>
+        <p id="hint2" class="hidden">Hint 3: The third number is <strong>1</strong></p>
+        <p id="hint3" class="hidden">Hint 4: The last number is <strong>9</strong></p>
+    </div>
 
+    <!-- Enter the final code -->
+    <input type="text" id="codeInput" placeholder="Enter 4-digit code">
+    <button onclick="checkCode()">Unlock Message</button>
+
+    <script>
+        function showHint(index) {
+            document.getElementById("hint" + index).style.display = "block";
+        }
+
+        function checkCode() {
+            let enteredCode = document.getElementById("codeInput").value;
+            if (enteredCode === "3719") { // Correct code
+                window.location.href = "final_message.html";
+            } else {
+                alert("Wrong code! Keep looking for hints.");
+            }
+        }
+    </script>
 </body>
 </html>
+
