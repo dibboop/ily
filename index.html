@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Love Letter 💖</title>
+    <title>Hacked?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Something Special! 🥰</h1>
-    <p>Click <a href="message.html">here</a> to see my message for you! 💌</p>
+    <div class="hacker-screen">
+        <p id="hacker-text"></p>
+        <button class="start-btn" onclick="startHack()">Start the Hack</button>
+    </div>
+
+    <script>
+        // Fake hacking text effect
+        const text = [
+            "Initializing system breach...",
+            "Bypassing security...",
+            "Accessing mainframe...",
+            "Decrypting secret files...",
+            "Uploading love virus 💖..."
+        ];
+
+        let index = 0;
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("hacker-text").innerHTML += text[index] + "<br>";
+                index++;
+                setTimeout(typeText, 1000);
+            } else {
+                document.querySelector(".start-btn").style.display = "block";
+            }
+        }
+
+        function startHack() {
+            window.location.href = "game.html";  // Goes to the actual game
+        }
+
+        window.onload = typeText;
+    </script>
 </body>
 </html>
+
